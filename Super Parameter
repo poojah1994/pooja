@@ -1,0 +1,35 @@
+class Library{  
+String name;  
+String address; 
+int phone;
+ 
+Library(String name, String address, int phone){    
+this.name=name;
+this.address=address;
+this.phone=phone;
+}  
+}  
+
+class Books extends Library{  
+double price;
+String type;
+int pages;
+String author;
+  
+Books(String name,String address,int phone,double price,String type,int pages,String author){  
+super(name,address,phone);//reusing parent constructor  
+this.price=price;
+this.type=type;
+this.pages=pages;
+this.author=author;  
+}  
+void display(){
+System.out.println(name+" "+address+" "+phone+" "+price+" "+type+" "+pages+" "+author);}  
+}  
+
+public class SuperParameter{  
+public static void main(String[] args){  
+Books b=new Books("pooja","bangalore",987654321,50,"novel",200,"abc");  
+b.display();  
+}
+}  
